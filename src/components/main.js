@@ -56,8 +56,9 @@ export default class Draw extends React.Component {
         });
         console.log(this.state.painting)
     }
-    
+
     mouseUp() {
+        //setting state here doesn't register first move, need to move setstate away from mouse up
         this.ctx.beginPath();
         this.setState({
             painting: false,
